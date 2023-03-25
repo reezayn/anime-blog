@@ -1,4 +1,6 @@
-import './globals.css'
+import Banner from '@/components/Banner'
+import Header from '@/components/Header'
+import '../globals.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='max-w-6xl mx-auto'>
+        <Header />
+        <Banner />
+        {children}
+      </body>
     </html>
   )
 }
